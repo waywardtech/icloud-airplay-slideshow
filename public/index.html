@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <title>iCloud AirPlay Slideshow</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <div id="setup" class="screen">
+    <div class="panel">
+      <h1>iCloud AirPlay Slideshow</h1>
+      <p>
+        Select a folder of media, then start the slideshow.
+      </p>
+      <input id="folderInput" type="file" webkitdirectory multiple />
+      <div class="row">
+        <button id="pickBtn" class="btn">Select Folder</button>
+        <button id="startBtn" class="btn" disabled>Start Slideshow</button>
+        <button id="clearBtn" class="btn" disabled>Clear</button>
+      </div>
+      <p class="hint" id="status">No folder selected.</p>
+      <p class="hint">
+        Controls:
+        <span class="badge">Space</span> play/pause,
+        <span class="badge">&larr;</span> previous,
+        <span class="badge">&rarr;</span> next,
+        <span class="badge">Esc</span> end
+      </p>
+    </div>
+  </div>
+  <div id="stage">
+    <div id="mediaWrap"></div>
+    <div id="audioOverlay">
+      <div>
+        <div class="title" id="audioTitle">Playing audio&hellip;</div>
+        <div class="sub">Use AirPlay from media controls where supported.</div>
+      </div>
+    </div>
+    <div id="hud">
+      <div class="now" id="nowPlaying"></div>
+      <div class="keys">
+        <span class="k">Space</span> play/pause &middot;
+        <span class="k">&larr;/&rarr;</span> prev/next &middot;
+        <span class="k">Esc</span> end
+      </div>
+    </div>
+  </div>
+  <script src="./app.js"></script>
+</body>
+</html>
